@@ -1,0 +1,194 @@
+/* --- Reset Básico y Estilos Globales --- */
+:root {
+    --font-titles: 'Orbitron', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Dejamos una fuente más legible para el cuerpo del texto */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* --- Tipografía Personalizada (Solo para elementos específicos si es necesario) --- */
+h2, h1,.character-gallery figcaption {
+    font-family: var(--font-titles);
+}
+
+span{
+    font-weight: bold;
+}
+
+
+
+/* --- Encabezado --- */
+header {
+    /* Fondo del espacio con un degradado oscuro para legibilidad del logo */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Img/espacio-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 1rem; /* Mantenemos el padding para que se vea el fondo */
+    text-align: center;
+    border-bottom: 5px solid #97ce4c; /* Verde del portal */
+}
+
+header img{
+    max-width: 450px; /* Aumentamos un poco el tamaño máximo */
+    height: auto;
+    /* Efecto de brillo sutil para que el logo resalte */
+    filter: drop-shadow(0 0 8px rgba(151, 206, 76, 0.7));
+}
+
+/* --- Navegación Principal --- */
+.main-nav {
+    background: #333;
+    padding: 0.5rem 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Para que el menú se adapte en pantallas pequeñas */
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    background: #555;
+}
+
+/* --- Contenido Principal --- */
+main {
+    max-width: 1200px;
+    margin: 2rem auto; /* Centra el contenido y añade espacio vertical */
+    padding: 0 2rem; /* Espacio en los lados */
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #1e4356;
+}
+
+.intro p {
+    margin-bottom: 1rem;
+}
+
+/* --- Galería de Personajes (Flexbox) --- */
+.characters {
+    margin-top: 3rem;
+}
+
+.character-gallery {
+    display: flex; /* ¡Aquí usamos Flexbox! */
+    justify-content: space-around; /* Distribuye el espacio entre los personajes */
+    gap: 1.5rem; /* Espacio entre las tarjetas de personaje */
+    flex-wrap:wrap; /* Permite que los elementos se reorganicen en pantallas pequeñas */
+}
+
+.character-gallery figure {
+    flex: 1; /* Cada personaje ocupa un espacio flexible */
+    min-width: 280px; /* Ancho mínimo antes de que se reorganicen */
+    text-align: center;
+    background: #fff;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.character-gallery figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.character-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid #02b1c8;
+}
+.character-gallery figure img {
+    width: 100%;
+    height: 500px; /* Puedes ajustar este valor según prefieras */
+    object-fit: cover;
+}
+
+.character-gallery figcaption {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* --- Pie de Página (Footer con Flexbox) --- */
+footer {
+    display: flex; /* ¡Flexbox para el footer! */
+    justify-content: space-between; /* Alinea la navegación a la izquierda y redes a la derecha */
+    align-items: center;
+    background: #333;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    flex-wrap: wrap; /* Para responsividad */
+    gap: 1rem; /* Espacio si los elementos se apilan */
+    margin-bottom: 0px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-nav a, .social-media a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover, .social-media a:hover {
+    color: #97ce4c; /* Verde del portal al pasar el mouse */
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+}
+
+/* --- Media Queries Globales para Responsividad --- */
+@media screen and (max-width: 768px) {
+    /* Ajustes generales para tablets y móviles */
+    header {
+        padding: 2rem 1rem; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    header img {
+        max-width: 80%; /* Ajusta el tamaño del logo en pantallas pequeñas */
+    }
+
+    main {
+        padding: 0 1rem;
+    }
+
+    footer {
+        flex-direction: column; /* Apila los elementos del footer */
+        text-align: center;
+    }
+}

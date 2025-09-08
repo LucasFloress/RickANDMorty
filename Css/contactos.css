@@ -1,0 +1,133 @@
+/* --- Página Contactos --- */
+/* Estilo específico SOLO para la página de contacto */
+body#contact-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f8ff; /* Un azul muy claro */
+    background-image: url("../Img/universo-en-rick-y-morty_3840x2160_xtrafondos.com.jpg");
+    /* Propiedades clave para que la imagen de fondo se vea bien */
+    background-size: cover;      /* Cubre todo el espacio disponible */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed;/* Fija la imagen para que no se mueva con el scroll */
+    background-repeat: no-repeat;/* Evita que la imagen se repita */
+}
+
+/* -- Main -- */
+body#contact-page main {
+    flex-grow: 1;
+}
+
+#titulo{
+    text-align: center;
+    color: #97ce4c; /* Verde portal */
+    font-family: var(--font-titles);
+}
+
+#contact-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.582);
+    margin: 20px auto;
+    width: 50%;
+}
+
+#contact-form .form-group {
+    margin-bottom: 1rem; /* Espacio entre cada grupo de etiqueta-input */
+}
+
+#contact-form label {
+    display: block; /* Hace que la etiqueta ocupe su propia línea */
+    margin-bottom: 5px; /* Pequeño espacio sobre el campo de entrada */
+    color: #333;
+    font-weight: bold;
+    text-align: left; /* Alineamos el texto de la etiqueta a la derecha */
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"] {
+    width: 100%; /* El input ocupa todo el ancho del formulario */
+    padding: 12px; /* Espacio interno para que el texto no esté pegado al borde */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para el botón de envío */
+#enviar {
+    display: block; /* Lo convertimos en un elemento de bloque */
+    margin: 1rem auto 0; /* Margen superior de 1rem, y centrado horizontalmente con 'auto' */
+    background-color: #97ce4c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#enviar:hover {
+    transform: scale(1.05); /* Pequeño efecto de zoom al pasar el mouse */
+}
+
+body#contact-page p{
+    text-align: center;
+    color: #ced1c9f8
+}
+
+
+/*-- Logo de Rick and Morty --*/
+div#logo{
+    text-align: center;
+    margin-top: 20px;
+}
+
+div#logo img{
+    width: 300px;
+    height: auto;
+    filter: drop-shadow(0 0 8px rgba(151, 206, 76, 0.7));
+    margin-bottom: 1rem;
+    margin-top: 20px;
+}
+
+/* -- Ajuste footer contacto.html -- */
+body#contact-page footer {
+    margin: 0;
+    flex-direction: column; /* Apila los elementos del footer en pantallas pequeñas */
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-textarea {
+    width: 100%; /* El textarea ocupa todo el ancho del formulario */
+    padding: 12px; /* Espacio interno para que el texto no esté pegado al borde */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-height: 100px; /* Altura mínima para el textarea */
+    resize: vertical; /* Permite redimensionar solo verticalmente */
+}
+
+/* --- Ajustes específicos para el header en la página de contacto --- */
+/* Sobreescribimos los estilos del header para que no ocupe toda la pantalla */
+body#contact-page header {
+    height: auto; /* Reseteamos la altura para que se ajuste al contenido */
+    padding: 2rem 1rem; /* Le damos un padding más razonable */
+    background: none; /* Quitamos el fondo del header para ver el del body */
+    border-bottom: none; /* Quitamos el borde inferior si no lo queremos aquí */
+}
+
+
+/* --- Media Queries para la página de Contacto --- */
+@media screen and (max-width: 768px) {
+    #contact-form {
+        width: 80%; /* Aumenta el ancho del formulario en tablets */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #contact-form {
+        width: 95%; /* El formulario ocupa casi todo el ancho en móviles */
+        padding: 15px;
+    }
+}
