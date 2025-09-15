@@ -21,6 +21,15 @@
             <img src="Img/Rick_and_Morty.webp" alt="Logo de Rick and Morty" class="titulo-logo" style="max-width: 300px;">
         </a>
     </header>
+    <nav class="main-nav">
+        <button class="menu-toggle">☰</button>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="temporadas.html">Temporadas</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="contactos.html">Contacto</a></li>
+        </ul>
+    </nav>
 
     <div class="galeria-header">
         <h2>Galería Espacial</h2>
@@ -31,15 +40,43 @@
 
     <main class="galeria-container">
         <!-- Reemplaza el 'src' con la ruta a tus 8 imágenes -->
-        <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Rick Sanchez">
-        <img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" alt="Morty Smith">
-        <img src="Img/gale_06.webp" alt="Summer Smith">
-        <img src="Img/gale_01.webp" alt="Beth Smith">
-        <img src="Img/gale_02.webp" alt="Jerry Smith">
-        <img src="Img/gale_05.webp" alt="Adjudicator Rick">
-        <img src="Img/gale_03.webp" alt="Alien Rick">
-        <img src="Img/gale_04.webp" alt="Mr. Poopybutthole">
+        <img src="Img/gale_07.webp" alt="Imagen 1" class="gallery-image">
+        <img src="Img/gale_08.webp" alt="Imagen 2" class="gallery-image">
+        <img src="Img/gale_06 (1).webp" alt="Imagen 3" class="gallery-image">
+        <img src="Img/gale_01.webp" alt="Imagen 4" class="gallery-image">
+        <img src="Img/gale_02.webp" alt="Imagen 5" class="gallery-image">
+        <img src="Img/universo-en-rick-y-morty_3840x2160_xtrafondos.com.jpg" alt="Imagen 6" class="gallery-image">
+        <img src="Img/gale_03.webp" alt="Imagen 7" class="gallery-image">
+        <img src="Img/gale_04.webp" alt="Imagen 8" class="gallery-image">
     </main>
 
+    <!-- ... tu contenido actual ... -->
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+            <div class="lightbox-content">
+            <a class="lightbox-prev">&#10094;</a>
+            <img id="lightbox-image" src="" alt="Imagen ampliada">
+            <a class="lightbox-next">&#10095;</a>
+        </div>
+    </div>
+    
+    <footer>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#">Términos de Uso</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="Js/menu.js"></script>
+    <script src="js/galeria.js"></script>
 </body>
 </html>

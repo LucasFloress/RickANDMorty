@@ -1,6 +1,9 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
-    <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- Google Fonts Link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,55 +13,50 @@
     <link rel="stylesheet" href="Css/styles.css">
     <link rel="stylesheet" href="Css/contactos.css">
     <title>Contactos</title>
-    </head> 
-    <body id="contact-page"> 
-        <header> 
+</head>
+<body id="contact-page">
+    <header>
         <a href="index.html">
-            <img src="Img/Rick_and_Morty.webp" alt="Logo de Rick and Morty" class="titulo-logo" style="max-width: 300px;"> 
-        </a> 
-        <main class="intro">
-            <div id="container"> 
-                <h1 id="titulo">Contáctanos</h1> 
-                <p>
-                    Completa el siguiente formulario para que podamos ponernos en contacto contigo.
-                </p> 
-                <form id="contact-form" method="POST" action="#">
-                    <div class="form-group">
-                        <label for="minombre">Nombre:</label>
-                        <input type="text" id="minombre" name="nombre" placeholder="Ingresa tu nombre" required> 
-                    </div> 
-                    <div class="form-group"> 
-                        <label for="miemail">Email:</label> 
-                        <input type="email" id="miemail" name="email" placeholder="Ingresa tu email" required> 
-                    </div> 
-                    <div class="form-group"> 
-                        <label for="mitelefono">Teléfono:</label>
-                        <input type="tel" id="mitelefono" name="telefono" placeholder="Ingresa tu teléfono" required>
-                    </div> 
-                    <div> <label for="mensaje">Mensaje:</label> <textarea class="contact-textarea" id="mensaje"id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea> </div> <input type="submit" value="Enviar" id="enviar"> </form> </div> 
-        </main> 
-        <footer> 
-            <nav class="footer-nav"> 
-                <ul class="footer-links"> 
-                    <li>
-                        <a href="index.html">Inicio</a>
-                    </li> 
-                    <li>
-                        <a href="#">Episodios</a>
-                    </li>
-                    <li>
-                        <a href="#">Personajes</a>
-                    </li> 
-                </ul>  
-                <ul class="legal-links"> 
-                    <li>
-                        <a href="#">Términos de Uso</a>
-                    </li> 
-                    <li>
-                        <a href="#">Política de Privacidad</a>
-                    </li>
-                </ul>
-            </nav> 
-        </footer> 
-    </body> 
+            <img src="Img/Rick_and_Morty.webp" alt="Logo de Rick and Morty" class="titulo-logo" style="max-width: 300px;">
+        </a>
+    </header>
+    <main class="intro">
+        <div id="container">
+            <form id="contact-form" method="POST" action="#">
+                <h1 id="titulo">Contáctanos</h1>
+                <div class="form-group">
+                    <label for="minombre">Nombre:</label>
+                    <input type="text" id="minombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="miemail">Email:</label>
+                    <input type="email" id="miemail" name="email" placeholder="Ingresa tu email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mitelefono">Teléfono:</label>
+                    <input type="tel" id="mitelefono" name="telefono" placeholder="Ingresa tu teléfono" required>
+                </div>
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea class="contact-textarea" id="mensaje"id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+                </div>
+                <input type="submit" value="Enviar" id="enviar">
+                </form>
+        </div>
+    </main>
+    <footer>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#">Términos de Uso</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+    <script src="Js/menu.js"></script>
+</body>
 </html>

@@ -1,0 +1,63 @@
+/* --- Estilos para la página de Temporadas --- */
+
+.page-header {
+    text-align: center;
+    margin: 2rem 1rem;
+}
+
+.page-header h2 {
+    font-size: 2.5rem;
+    color: #1e4356;
+    font-family: var(--font-titles);
+}
+
+.seasons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.season-card {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.season-card:hover {
+    transform: scale(1.03);
+}
+
+.season-poster {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+.season-summary {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(2, 177, 200, 0.9); /* Azul-cyan semi-transparente */
+    color: white;
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-in-out;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.season-summary.active {
+    transform: translateY(0);
+}
+
+.season-summary h4 { font-family: var(--font-titles); margin-bottom: 0.5rem; }
+.season-summary p { font-size: 0.9rem; line-height: 1.5; }

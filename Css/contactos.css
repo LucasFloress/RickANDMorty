@@ -13,11 +13,6 @@ body#contact-page {
     background-repeat: no-repeat;/* Evita que la imagen se repita */
 }
 
-/* -- Main -- */
-body#contact-page main {
-    flex-grow: 1;
-}
-
 #titulo{
     text-align: center;
     color: #97ce4c; /* Verde portal */
@@ -28,9 +23,9 @@ body#contact-page main {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.582);
+    box-shadow: 0 0 10px rgba(7, 7, 7, 0.582);
     margin: 20px auto;
-    width: 50%;
+    width: 100%;
 }
 
 #contact-form .form-group {
@@ -76,8 +71,6 @@ body#contact-page p{
     color: #ced1c9f8
 }
 
-
-/*-- Logo de Rick and Morty --*/
 div#logo{
     text-align: center;
     margin-top: 20px;
@@ -93,10 +86,11 @@ div#logo img{
 
 /* -- Ajuste footer contacto.html -- */
 body#contact-page footer {
-    margin: 0;
-    flex-direction: column; /* Apila los elementos del footer en pantallas pequeñas */
-    justify-content: center;
+    margin-top: auto; /* Empuja el footer hacia abajo para que se pegue al final */
+    flex-direction: row; /* Apila los elementos del footer en pantallas pequeñas */
+    justify-content: space-between;
     text-align: center;
+
 }
 
 .contact-textarea {
@@ -117,6 +111,10 @@ body#contact-page header {
     border-bottom: none; /* Quitamos el borde inferior si no lo queremos aquí */
 }
 
+/* Desactivamos el efecto hover del header en esta página */
+body#contact-page header:hover {
+    transform: none;
+}
 
 /* --- Media Queries para la página de Contacto --- */
 @media screen and (max-width: 768px) {

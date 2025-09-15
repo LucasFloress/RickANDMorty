@@ -50,6 +50,7 @@ header img{
 .main-nav {
     background: #333;
     padding: 0.5rem 0;
+    margin-top: -1px; /* Para que se vea más integrado con el header */
 }
 
 .main-nav ul {
@@ -70,6 +71,17 @@ header img{
 
 .main-nav ul li a:hover {
     background: #555;
+}
+
+/* Hamburger Menu Button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.5rem;
 }
 
 /* --- Contenido Principal --- */
@@ -122,14 +134,17 @@ main h2 {
 .character-gallery img {
     max-width: 100%;
     height: auto;
-    border-radius: 50%;
+    border-radius: 50% / 70%; /* Oval shape */
     border: 4px solid #02b1c8;
 }
+
 .character-gallery figure img {
     width: 100%;
     height: 500px; /* Puedes ajustar este valor según prefieras */
     object-fit: cover;
 }
+
+
 
 .character-gallery figcaption {
     margin-top: 1rem;
@@ -172,7 +187,8 @@ footer {
     gap: 1rem;
 }
 
-/* --- Media Queries Globales para Responsividad --- */
+
+/* --- Media Queries Globales para Responsividad --- */ 
 @media screen and (max-width: 768px) {
     /* Ajustes generales para tablets y móviles */
     header {
@@ -190,5 +206,62 @@ footer {
     footer {
         flex-direction: column; /* Apila los elementos del footer */
         text-align: center;
+    }
+
+    /* Hamburger Menu Responsive */
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        position: relative;
+    }
+
+    .main-nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #333;
+        flex-direction: column;
+    }
+
+    .main-nav ul.active {
+        display: flex;
+    }
+
+    /* Adjust character images on small screens */
+
+    .character-gallery figure img {
+        height: auto; /* Remove fixed height for better responsiveness */
+        max-height: 300px; /* Set a max height */
+    }
+}
+/* Responsive: stack images vertically on medium screens */
+@media screen and (max-width: 951px) {
+    .character-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    .character-gallery figure {
+        max-width: 400px; /* Un ancho máximo para que no se estire demasiado */
+    }
+}
+/* Responsive: stack images vertically on small screens */
+@media screen and (max-width: 768px) {
+    .character-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    .character-gallery figure {
+        max-width: 300px;
+        width: 100%;
+    }
+    .character-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50% / 70%; /* Oval shape */
+    border: 4px solid #02b1c8;
     }
 }
