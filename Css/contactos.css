@@ -163,10 +163,7 @@ body#contact-page header:hover {
     position: absolute;
 }
 
-.titulo-mapa{
-    color: #97ce4c;
-}
-
-p{
-    color: #97ce4c
+/* Estilo para el párrafo dentro del contenedor del mapa */
+.map-container p {
+    color: #97ce4c; /* Verde portal */
 }
