@@ -3,10 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Temporadas de Rick and Morty</title>
+    <!-- Google Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="Css/styles.css">
+    <link rel="stylesheet" href="Css/temporadas.css">
 </head>
 <body>
-    <!-- Temporada 6 -->
+    <header>
+        <a href="index.html">
+            <img src="Img/Rick_and_Morty.webp" alt="Logo de Rick and Morty" class="titulo-logo" style="max-width: 300px;">
+        </a>
+    </header>
+    <nav class="main-nav">
+        <button class="menu-toggle">☰</button>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="temporadas.html" class="dropbtn">Temporadas</a>
+                <div class="dropdown-content">
+                    <a href="temporadas.html#seasons-1-4">Temporadas 1-4</a>
+                    <a href="temporadas.html#seasons-5-8">Temporadas 5-8</a>
+                </div>
+            </li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="contactos.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="page-header">
+            <h2>Explora las Temporadas</h2>
+            <p>Haz clic en la portada de una temporada para leer su resumen.</p>
+        </div>
+
+        <div class="seasons-container">
+            <!-- Temporada 6 -->
             <div class="season-card">
                 <img src="Img/season_6.webp" alt="Portada Temporada 6" class="season-poster">
                 <div class="season-summary">
@@ -30,5 +65,20 @@
                     <p>La octava temporada (aún no estrenada) promete explorar un nuevo capítulo en la vida de Rick Sánchez. Sin el motor de la venganza, ¿qué nuevas aventuras o crisis existenciales enfrentará? Se espera que la serie continúe desarrollando las relaciones familiares y explore las vastas y extrañas posibilidades del multiverso, ahora que las barreras han caído y los personajes deben encontrar un nuevo propósito.</p>
                 </div>
             </div>
+        </div>
+    </main>
+        <footer>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#">Términos de Uso</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
 </body>
 </html>
