@@ -162,3 +162,11 @@ body#contact-page header:hover {
     width: 100%;
     position: absolute;
 }
+
+.titulo-mapa{
+    color: #97ce4c;
+}
+
+p{
+    color: #97ce4c
+}
