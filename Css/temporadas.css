@@ -67,3 +67,37 @@
     display: contents; /* Hace que el div no afecte el layout de flexbox */
     scroll-margin-top: 80px; /* Ajuste para que el ancla no quede oculta por el nav */
 }
+
+/* --- Pie de Página (Footer con Flexbox) --- */
+footer {
+    display: flex; /* ¡Flexbox para el footer! */
+    justify-content: space-between; /* Alinea la navegación a la izquierda y redes a la derecha */
+    align-items: center;
+    background: #333;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    flex-wrap: wrap; /* Para responsividad */
+    gap: 1rem; /* Espacio si los elementos se apilan */
+    margin-bottom: 0px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-nav a, .social-media a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover, .social-media a:hover {
+    color: #97ce4c; /* Verde del portal al pasar el mouse */
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+}
