@@ -20,30 +20,37 @@
             <img src="Img/Rick_and_Morty.webp" alt="Logo de Rick and Morty" class="titulo-logo" style="max-width: 300px;">
         </a>
     </header>
-    <main class="intro">
-        <div id="container">
-            <form id="contact-form" method="POST" action="#">
-                <h1 id="titulo">Contáctanos</h1>
-                <div class="form-group">
-                    <label for="minombre">Nombre:</label>
-                    <input type="text" id="minombre" name="nombre" placeholder="Ingresa tu nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="miemail">Email:</label>
-                    <input type="email" id="miemail" name="email" placeholder="Ingresa tu email" required>
-                </div>
-                <div class="form-group">
-                    <label for="mitelefono">Teléfono:</label>
-                    <input type="tel" id="mitelefono" name="telefono" placeholder="Ingresa tu teléfono" required>
-                </div>
-                <div>
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea class="contact-textarea" id="mensaje"id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
-                </div>
-                <input type="submit" value="Enviar" id="enviar">
-                </form>
+    <main>
+        <form id="contact-form" method="POST" action="#">
+            <h1 id="titulo">Contáctanos</h1>
+            <div class="form-group">
+                <label for="minombre">Nombre:</label>
+                <input type="text" id="minombre" name="nombre" placeholder="Ingresa tu nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="miemail">Email:</label>
+                <input type="email" id="miemail" name="email" placeholder="Ingresa tu email" required>
+            </div>
+            <div class="form-group">
+                <label for="mitelefono">Teléfono:</label>
+                <input type="tel" id="mitelefono" name="telefono" placeholder="Ingresa tu teléfono" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea class="contact-textarea" id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+            </div>
+            <input type="submit" value="Enviar" id="enviar">
+        </form>
+
+        <!-- Sección del Mapa -->
+        <div class="map-container">
+            <h2 id="titulo-mapa">Nuestra Ubicación Secreta</h2>
+            <p>Psst... nos encontrarás aquí, pero no se lo digas a la Federación Galáctica.</p>
+            <div class="map-responsive">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51859.3517915398!2d-115.8427241486328!3d37.243095400000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80b81baaba3e8c81%3A0x9702227bf95f69d4!2s%C3%81rea%2051!5e0!3m2!1ses!2ses!4v1716142323561!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
-    </main>
+    </main>    
     <footer>
         <nav class="footer-nav">
             <ul>
@@ -58,6 +65,5 @@
         </div>
     </footer>
     <script src="js/menu.js"></script>
-    <script src="Js/menu.js"></script>
 </body>
 </html>

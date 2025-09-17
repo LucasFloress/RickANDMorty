@@ -19,13 +19,15 @@ body#contact-page {
     font-family: var(--font-titles);
 }
 
+/* Ajustamos el main para que contenga el form y el mapa */
+body#contact-page main {
+    max-width: 800px; /* Ancho máximo para el contenido central */
+}
+
 #contact-form {
     background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(7, 7, 7, 0.582);
-    margin: 20px auto;
-    width: 100%;
+    padding: 2rem;
+    border-radius: 10px;    box-shadow: 0 0 10px rgba(7, 7, 7, 0.582);
 }
 
 #contact-form .form-group {
@@ -118,14 +120,45 @@ body#contact-page header:hover {
 
 /* --- Media Queries para la página de Contacto --- */
 @media screen and (max-width: 768px) {
-    #contact-form {
-        width: 80%; /* Aumenta el ancho del formulario en tablets */
-    }
+    /* No se necesitan ajustes específicos para el form si el main ya es responsivo */
 }
 
 @media screen and (max-width: 480px) {
     #contact-form {
-        width: 95%; /* El formulario ocupa casi todo el ancho en móviles */
         padding: 15px;
     }
+}
+
+/* --- Estilos para el Mapa --- */
+.map-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(7, 7, 7, 0.582);
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#titulo-mapa {
+    color: #97ce4c; /* Verde portal */
+    font-family: var(--font-titles);
+    margin-bottom: 0.5rem;
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%; /* Proporción 16:9 */
+    position: relative;
+    height: 0;
+    border: 3px solid #97ce4c; /* Borde verde portal */
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
