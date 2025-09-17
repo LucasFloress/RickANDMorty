@@ -73,6 +73,32 @@ header img{
     background: #555;
 }
 
+/* --- Dropdown Menu --- */
+.main-nav ul li.dropdown {
+    position: relative;
+}
+
+.main-nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    border-radius: 0 0 4px 4px;
+}
+
+.main-nav ul li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.main-nav .dropdown-content a {
+    padding: 12px 16px;
+}
+
 /* Hamburger Menu Button */
 .menu-toggle {
     display: none;

@@ -25,7 +25,13 @@
         <button class="menu-toggle">☰</button>
         <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="temporadas.html">Temporadas</a></li>
+            <li class="dropdown">
+                <a href="temporadas.html" class="dropbtn">Temporadas</a>
+                <div class="dropdown-content">
+                    <a href="temporadas.html#seasons-1-4">Temporadas 1-4</a>
+                    <a href="temporadas.html#seasons-5-8">Temporadas 5-8</a>
+                </div>
+            </li>
             <li><a href="galeria.html">Galería</a></li>
             <li><a href="contactos.html">Contacto</a></li>
         </ul>
@@ -38,6 +44,7 @@
         </div>
 
         <div class="seasons-container">
+            <div id="seasons-1-4" class="season-group">
             <!-- Temporada 1 -->
             <div class="season-card">
                 <img src="Img/season_1.jpg" alt="Portada Temporada 1" class="season-poster">
@@ -73,6 +80,8 @@
                     <p>Esta temporada se divide en dos partes y regresa a un formato de aventuras más episódicas y autoconclusivas. Rick se enfrenta a viejos enemigos y nuevos desafíos, mientras la familia intenta encontrar un nuevo equilibrio. Se exploran temas como el fascismo, el destino y la naturaleza de la realidad, con episodios destacados como "The Old Man and the Seat" y el regreso de Birdperson en "Star Mort Rickturn of the Jerri".</p>
                 </div>
             </div>
+            </div>
+            <div id="seasons-5-8" class="season-group">
             <!-- Temporada 5 -->
             <div class="season-card">
                 <img src="Img/season_5..webp" alt="Portada Temporada 5" class="season-poster">
@@ -104,6 +113,7 @@
                     <h4>Temporada 8</h4>
                     <p>La octava temporada (aún no estrenada) promete explorar un nuevo capítulo en la vida de Rick Sánchez. Sin el motor de la venganza, ¿qué nuevas aventuras o crisis existenciales enfrentará? Se espera que la serie continúe desarrollando las relaciones familiares y explore las vastas y extrañas posibilidades del multiverso, ahora que las barreras han caído y los personajes deben encontrar un nuevo propósito.</p>
                 </div>
+            </div>
             </div>
         </div>
     </main>
